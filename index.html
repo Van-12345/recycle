@@ -9,7 +9,8 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
     <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
     <script src="https://unpkg.com/aframe-state-component@7.1.0/dist/aframe-state-component.min.js"></script>
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/main.jsx"></script>
+
     <title>Recycle</title>
     <script>
       window.html = (strings, ...values) =>
@@ -17,6 +18,10 @@
     </script>
   </head>
   <body>
+    <!-- Div này để React render nội dung -->
+    <div id="root"></div>
+
+    <!-- Scene A-Frame -->
     <a-scene game-manager physics="debug: false;" hud>
       <!-- Templates -->
       <a-template name="assets" />
@@ -26,13 +31,11 @@
       <a-template name="lights" />
       <a-template name="sounds" />
       <a-template name="banner" />
-      <!-- Templates -->
       <!-- Routes -->
       <a-route id="start-screen" template="start-screen"></a-route>
       <a-route id="game-field" template="game-field"></a-route>
       <a-route id="game-over" template="game-over"></a-route>
       <a-route id="how-to-play" template="how-to-play"></a-route>
-      <!-- Routes -->
     </a-scene>
   </body>
 </html>

@@ -1,5 +1,6 @@
-// Third non-global
+// Import các module hiện có
 import 'aframe-event-set-component';
+
 // Templates
 import './templates/common/assets';
 import './templates/common/mixins';
@@ -15,6 +16,7 @@ import './templates/routes/game-field';
 import './templates/routes/start-screen';
 import './templates/routes/game-over';
 import './templates/routes/how-to-play';
+
 // Register components
 import './components/game-manager';
 import './components/controls-checker';
@@ -31,8 +33,23 @@ import './components/restrict-position';
 import './components/to-camera';
 import './components/tutorial';
 import './components/floor-collider';
+
 // State
 import './states/index';
+
 // Systems
 import './systems/trash';
 import './systems/trash-bin';
+
+// Import React và các thành phần liên quan
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App"; // Đường dẫn tới file App.jsx
+import './index.css'; // CSS tùy chọn nếu bạn có
+
+// Khởi tạo ứng dụng React
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
